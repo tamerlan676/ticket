@@ -3,6 +3,7 @@
     .ticket-wrapper
         .box
             img(:src="require(`@/assets/images/${image}.svg`)")
+            .namefield {{ name }}
         .options
          h2 Счастливый билет
          .price 990 
@@ -15,7 +16,7 @@
                     label(:for="item.title") {{ item.title }}
             .step-title 2. Выполните второе дейтсвие, введите все данные, которые необходимо ввести
             .field-block
-                input(class="input" type="text"  placeholder="Введите имя")
+                input(class="input" type="text" @input="inputChangeHandler"  placeholder="Введите имя")
                 input(class="input" type="text"  placeholder="Введите имя")
                 input(class="input" type="text"  placeholder="Введите имя")
             .step-title 2. Выполните второе дейтсвие, введите все данные, которые необходимо ввести
@@ -30,6 +31,7 @@
 export default {
     data(){
         return{
+            name: 'Passanger Name',
             selected: '',
             moscow: false,
             chehol: false,
@@ -66,7 +68,11 @@ export default {
     methods: {
         showCity: function(a, b){
             this.image = b
+        },
+        inputChangeHandler: function(event){
+            this.name = event.target.value
         }
+        
     }
 }
 </script>
@@ -88,14 +94,14 @@ export default {
     .box{
         padding: 40px 0;
         width: 220px;
+        height: fit-content;
+        position: relative;
+        margin: 0 auto;
             @media (min-width: 992px) {
                 padding: 0;
                 width: 400px; 
             }  
-            @media (min-width: 1200px) {
-              
-            }
-        margin: 0 auto;
+
         img{
             width: 220px;
             @media (min-width: 992px) {
@@ -103,6 +109,13 @@ export default {
             margin: 0px auto;
             display: block;
         } 
+        }
+        .namefield{
+            position: absolute;
+            bottom: 111px;
+            font-size: 10px;
+            left: 40px;
+            font-weight: 600;
         }
     }
     .options{
