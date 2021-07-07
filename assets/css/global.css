@@ -1,0 +1,5 @@
+@font-face {
+    font-family: "Bessemer";
+    src: local("Bessemer"),
+     url(~assets/fonts/Bessemer-Bold.ttf) format("truetype");
+}

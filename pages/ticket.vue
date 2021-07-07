@@ -3,6 +3,7 @@
     .ticket-wrapper
         .box
             img(:src="require(`@/assets/images/${image}.svg`)")
+            .datefield {{ date }}
             .namefield {{ name }}
         .options
          h2 Счастливый билет
@@ -14,16 +15,16 @@
                     input(class="radio" type="radio" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
                     img(:src="item.flag")
                     label(:for="item.title") {{ item.title }}
-            .step-title 2. Выполните второе дейтсвие, введите все данные, которые необходимо ввести
+            .step-title 2. Введите данные пассажира
             .field-block
-                input(class="input" type="text" @input="inputChangeHandler"  placeholder="Введите имя")
-                input(class="input" type="text"  placeholder="Введите имя")
-                input(class="input" type="text"  placeholder="Введите имя")
-            .step-title 2. Выполните второе дейтсвие, введите все данные, которые необходимо ввести
+                input(class="input" type="text" @input="changeName"  placeholder="Введите имя")
+                input(class="input" type="text" @input="changeDate"  placeholder="Введите дату")
+                input(class="input" type="text"  placeholder="Введите модель телефона")
+            .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
             .field-block
-                input(class="input" type="text"  placeholder="Введите имя")
-                input(class="input" type="text"  placeholder="Введите имя")
-                input(class="input" type="text"  placeholder="Введите имя")
+                input(class="input" type="text"  placeholder="Имя")
+                input(class="input" type="text"  placeholder="Номер телефона")
+                input(class="input" type="text"  placeholder="Полный адрес")
             button(type="submit") Заказать чехол
 </template>
 
@@ -32,6 +33,7 @@ export default {
     data(){
         return{
             name: 'Passanger Name',
+            date: '23.12.2020',
             selected: '',
             moscow: false,
             chehol: false,
@@ -69,9 +71,12 @@ export default {
         showCity: function(a, b){
             this.image = b
         },
-        inputChangeHandler: function(event){
+        changeName: function(event){
             this.name = event.target.value
-        }
+        },
+        changeDate: function(event){
+            this.date = event.target.value
+        },
         
     }
 }
@@ -112,10 +117,29 @@ export default {
         }
         .namefield{
             position: absolute;
-            bottom: 111px;
+            font-family: 'Bessemer';
+            bottom: 115px;
             font-size: 10px;
             left: 40px;
             font-weight: 600;
+            @media (min-width: 992px) {
+                font-size: 16px;
+                left: 96px;
+                bottom: 110px;
+            }
+        }
+        .datefield{
+            position: absolute;
+            font-family: 'Bessemer';
+            top: 78px;
+            font-size: 10px;
+            right: 40px;
+            font-weight: 600; 
+             @media (min-width: 992px) {
+                 font-size: 15px;
+                 top: 57px;
+                 right: 95px;
+             }
         }
     }
     .options{
