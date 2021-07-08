@@ -1,19 +1,26 @@
-<template>
-  <div class="main">
-    <h1>test</h1>
-    <h2>test</h2>
-  </div>
+<template lang="pug">
+  .main
+    Slider
+    HelloText
+    Banner
+    Constructors
+    Banner
+    Constructors
 </template>
 
 <script>
-export default {}
+export default {};
 </script>
 
-<style scoped lang='scss'>
-.main{
-  background: red;
-  h1{
-    color: green
-  }
+<style lang="scss">
+.main {
+  font-family: "Montserrat";
+}
+h1, h2, h3, p{
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
 }
 </style>

@@ -14,6 +14,8 @@
                 input(class="radio" type="radio" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
                 img(:src="item.flag")
                 label(:for="item.title") {{ item.title }}
+         .wts-message Если вашего города мечты нет в списке, напишите нам в 
+            a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
          .step-title 2. Введите данные пассажира
          .field-block
             input(class="input" type="text" @input="changeName"  placeholder="Введите имя")
@@ -185,7 +187,7 @@ export default {
         }
         .towns-wrapper{
             display: flex;
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             flex-wrap: wrap;
             .item{
                 padding: 10px 16px;
@@ -211,6 +213,10 @@ export default {
             .radio{
                 display: none
             }
+        }
+        .wts-message{
+            margin-bottom: 16px;
+            display: block;
         }
         .field-block{
             margin-bottom:16px;
