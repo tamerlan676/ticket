@@ -62,6 +62,7 @@ export default {
   position: sticky;
   top: 0;
   background: #fff;
+  z-index: 10;
   @media (min-width: 768px) {
     flex-direction: column;
     height: 160px;
