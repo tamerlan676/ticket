@@ -1,5 +1,6 @@
 <template lang="pug">
   .main
+    Header
     Slider
     HelloText
     Banner
