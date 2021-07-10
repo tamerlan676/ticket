@@ -26,7 +26,7 @@ export default {
         }
         .title{
             text-transform: uppercase;
-            background: blue;
+            background: #29B6F6;
             font-weight: 700;
             color: white;
             font-size: 20px;
