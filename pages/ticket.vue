@@ -8,26 +8,27 @@
             .namefield {{ name }}
         .options
          h2 Счастливый билет
-         .price 990 ₽
-         .step-title 1. Выберите город своей мечты
-         .towns-wrapper
-            .item(v-for="(item, key) in towns" :key="key")
-                input(class="radio" type="radio" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
-                img(:src="item.flag")
-                label(:for="item.title") {{ item.title }}
-         .wts-message Если вашего города мечты нет в списке, напишите нам в 
-            a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
-         .step-title 2. Введите данные пассажира
-         .field-block
-            input(class="input" type="text" @input="changeName"  placeholder="Введите имя")
-            input(class="input" type="text" @input="changeDate"  placeholder="Введите дату")
-            input(class="input" type="text"  placeholder="Введите модель телефона")
-         .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
-         .field-block
-            input(class="input" type="text"  placeholder="Имя")
-            input(class="input" type="text"  placeholder="Номер телефона")
-            input(class="input" type="text"  placeholder="Полный адрес")
-         button(type="submit") Заказать чехол
+         form(name="contact" method="POST" data-netlify="true")
+            .price 990 ₽
+            .step-title 1. Выберите город своей мечты
+            .towns-wrapper
+                .item(v-for="(item, key) in towns" :key="key")
+                    input(class="radio" type="radio" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
+                    img(:src="item.flag")
+                    label(:for="item.title") {{ item.title }}
+            .wts-message Если вашего города мечты нет в списке, напишите нам в 
+                a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
+            .step-title 2. Введите данные пассажира
+            .field-block
+                input(class="input" name="name" type="text" @input="changeName"  placeholder="Введите имя")
+                input(class="input" name="date" type="text" @input="changeDate"  placeholder="Введите дату")
+                input(class="input" name="model" type="text"  placeholder="Введите модель телефона")
+            .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
+            .field-block
+                input(class="input" name="clientName" type="text"  placeholder="Имя")
+                input(class="input" name="phone" type="text"  placeholder="Номер телефона")
+                input(class="input" name="adress" type="text"  placeholder="Полный адрес")
+            button(type="submit") Заказать чехол
     .ticket-scheme
         .image
             img(src="~/assets/images/scheme.jpg")
