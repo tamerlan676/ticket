@@ -4,12 +4,12 @@
     .wrapper
         .item
             a(href="/ticket")
-                img(src="~/assets/images/chehol.svg")
+                img(src="~/assets/images/paris.svg")
                 .title Счастливый билет
                 .price 990 ₽
         .item
-            a(href="#")
-                img(src="~/assets/images/chehol.svg")
+            a(href="/music")
+                img(src="~/assets/images/music.svg")
                 .title Любимая песня
                 .price 990 ₽
         .item
@@ -61,6 +61,7 @@ export default {
             margin-bottom: 40px;
         }
         img{
+            margin-bottom: 16px;
             @media (min-width: 768px) {
                 width: 200px;
             }
