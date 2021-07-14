@@ -38,8 +38,8 @@
 export default {
     data(){
         return{
-            song: 'Passanger Name',
-            artist: '23.12.2020',
+            song: 'Lonely',
+            artist: 'Akon',
             url: null
         }
     },
