@@ -9,7 +9,7 @@
             img.oblozhka(:src="url")
         .options
          h2 Любимая песня 
-         form(name="contact" method="POST" data-netlify="true")
+         form(name="song" method="POST" data-netlify="true")
             .price 990 ₽
             .step-title 1. Введите информацию о песне
             .field-block
@@ -221,7 +221,6 @@ export default {
       .info{
           padding: 16px;
       }
-
   }
 }
 </style>
