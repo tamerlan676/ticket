@@ -4,23 +4,23 @@
     .wrapper
         .item
             a(href="/ticket")
-                img(src="~/assets/images/paris.svg")
+                img(src="~/assets/images/preview/travel.png")
                 .title Счастливый билет
                 .price 990 ₽
         .item
             a(href="/music")
-                img(src="~/assets/images/music.svg")
+                img(src="~/assets/images/preview/music.png")
                 .title Любимая песня
                 .price 990 ₽
         .item
-            a(href="#")
-                img(src="~/assets/images/chehol.svg")
-                .title Фотолента
+            a(href="/ticket")
+                img(src="~/assets/images/preview/smoke.png")
+                .title Свободный текст
                 .price 990 ₽
         .item
-            a(href="#")
-                img(src="~/assets/images/chehol.svg")
-                .title Мудрая мысль
+            a(href="/ticket")
+                img(src="~/assets/images/preview/palaroid.png")
+                .title Палароид
                 .price 990 ₽
 </template>
 
@@ -61,28 +61,24 @@ export default {
             margin-bottom: 40px;
         }
         img{
+            width: 150px;
             margin-bottom: 16px;
             @media (min-width: 768px) {
-                width: 200px;
+                width: 220px;
             }
-               @media (min-width: 768px) {
-                width: 200px;
+               @media (min-width: 1200px) {
+                width: 260px;
             }
             
         }
         .title{
             font-size: 13px;
-            width: 140px;
             color: #000;
             line-height: 18px;
             margin-bottom: 8px;
             font-weight: 500;
                 @media (min-width: 768px) {
-            width: 200px;
             font-size: 16px;
-            }
-            @media (min-width: 1200px) {
-                width: 200px;
             }
         }
         .price{
@@ -90,7 +86,6 @@ export default {
             font-weight: 500;
             text-align: center;
                   @media (min-width: 768px) {
-            width: 200px;
             font-size: 18px;
             }
         }

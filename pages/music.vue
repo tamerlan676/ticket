@@ -4,25 +4,21 @@
     .ticket-wrapper
         .box
             img(:src="require(`@/assets/images/music.svg`)")
-            .datefield {{ date }}
-            .namefield {{ name }}
+            .songfield {{ song }}
+            .artistfield {{ artist }}
+            img.oblozhka(:src="url")
         .options
          h2 Любимая песня 
          form(name="contact" method="POST" data-netlify="true")
             .price 990 ₽
-            .step-title 1. Выберите город своей мечты
-            .towns-wrapper
-                .item(v-for="(item, key) in towns" :key="key")
-                    input(class="radio" type="radio" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
-                    img(:src="item.flag")
-                    label(:for="item.title") {{ item.title }}
-            .wts-message Если вашего города мечты нет в списке, напишите нам в 
-                a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
-            .step-title 2. Введите информацию о песне
+            .step-title 1. Введите информацию о песне
             .field-block
-                input(class="input" name="name" type="text" @input="changeName"  placeholder="Введите имя")
-                input(class="input" name="date" type="text" @input="changeDate"  placeholder="Введите дату")
-                input(class="input" name="model" type="text"  placeholder="Введите модель телефона")
+                input(class="input" name="songName" type="text" @input="changeSong"  placeholder="Введите название песни")
+                input(class="input" name="artist" type="text" @input="changeArtist"  placeholder="Введите исполнителей")
+                label Загрузите обложку <br><br>
+                input(name="image" type="file" @change="onFileChange")
+            .wts-message Если у вас возникли проблемы с конструкотором, напишите нам в 
+                a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
             .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
             .field-block
                 input(class="input" name="clientName" type="text"  placeholder="Имя")
@@ -42,51 +38,22 @@
 export default {
     data(){
         return{
-            name: 'Passanger Name',
-            date: '23.12.2020',
-            selected: '',
-            moscow: false,
-            chehol: false,
-            image: 'moscow',
-            towns: [
-                {
-                    title: 'Moscow',
-                    img: 'moscow',
-                    flag: require('~/assets/images/rus.svg')
-                },
-                                {
-                    title: 'Madrid',
-                    img: 'madrid',
-                    flag: require('~/assets/images/spa.svg')
-                },
-                                {
-                    title: 'Paris',
-                    img: 'paris',
-                    flag: require('~/assets/images/spa.svg'),
-                },
-                                {
-                    title: 'Los-Angeles',
-                    flag: require('~/assets/images/usa.svg'),
-                    img: 'los-angeles'
-                },
-                {
-                    title: 'Tokyo',
-                    flag: require('~/assets/images/jap.svg'),
-                    img: 'tokyo'
-                }
-            ]
+            song: 'Passanger Name',
+            artist: '23.12.2020',
+            url: null
         }
     },
     methods: {
-        showCity: function(a, b){
-            this.image = b
+        changeSong: function(event){
+            this.song = event.target.value
         },
-        changeName: function(event){
-            this.name = event.target.value
+        changeArtist: function(event){
+            this.artist = event.target.value
         },
-        changeDate: function(event){
-            this.date = event.target.value
-        },
+        onFileChange(e) {
+      const file = e.target.files[0];
+      this.url = URL.createObjectURL(file);
+    }
         
     }
 }
@@ -125,31 +92,49 @@ export default {
             display: block;
         } 
         }
-        .namefield{
+        .songfield{
             position: absolute;
             font-family: 'Bessemer';
-            bottom: 115px;
+            bottom: 183px;
             font-size: 10px;
-            left: 40px;
+            left: 33px;
             font-weight: 600;
+            color: white;
+            background: black;
             @media (min-width: 992px) {
                 font-size: 16px;
-                left: 96px;
-                bottom: 110px;
+                left: 85px;
+                bottom: 200px;
             }
         }
-        .datefield{
+        .artistfield{
             position: absolute;
             font-family: 'Bessemer';
-            top: 78px;
+            color: white;
+            bottom: 170px;
+            left: 33px;
             font-size: 10px;
             right: 40px;
             font-weight: 600; 
              @media (min-width: 992px) {
                  font-size: 15px;
-                 top: 57px;
-                 right: 95px;
+                 bottom: 180px;
+                 left: 85px;
              }
+        }
+        .oblozhka{
+            width: 140px;
+            height: 140px;
+            left:40px;
+            top: 175px;
+            position: absolute;
+            @media (min-width: 992px) {
+                    width: 200px;
+                    height: 200px;
+                    left: 100px;
+                    top: 210px;
+                    position: absolute;
+            }
         }
     }
     .options{
@@ -186,35 +171,6 @@ export default {
             font-size: 16px;
             line-height: 24px;
             margin-bottom: 16px;
-        }
-        .towns-wrapper{
-            display: flex;
-            margin-bottom: 8px;
-            flex-wrap: wrap;
-            .item{
-                padding: 10px 16px;
-                background: #E0E0E0;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                width: fit-content;
-                margin-right: 20px;
-                margin-bottom: 20px;
-                display: flex;
-                align-items: center;
-                cursor: pointer;
-                img{
-                    width: 20px;
-                    margin-right: 5px;
-                }
-            }
-            label{
-                color: #0086C3;
-                font-weight: 500;
-                font-size: 15px;
-                cursor: pointer;
-            }
-            .radio{
-                display: none
-            }
         }
         .wts-message{
             margin-bottom: 16px;
