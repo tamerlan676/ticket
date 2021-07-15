@@ -17,6 +17,13 @@ export default {
     ]
   },
 
+  vue: {
+    config: {
+      productionTip: true,
+      devtools: true
+    }
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '~/assets/css/main.scss',
