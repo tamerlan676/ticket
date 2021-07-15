@@ -6,9 +6,9 @@
         img(:src="require(`@/assets/images/music.svg`)")
         .songfield {{ song }}
         .artistfield {{ artist }}
-        img.oblozhka(:src="url")
+        img.oblozhka(v-if="url" :src="url")
       .options
-        h2 Любимая песня
+        h2 Любимая песня 1
         form(name="song" method="POST" data-netlify="true")
           .price 990 ₽
           .step-title 1. Введите информацию о песне
