@@ -8,8 +8,8 @@
         .artistfield {{ artist }}
         img.oblozhka(v-if="url" :src="url")
       .options
-        h2 Любимая песня 1
-        form(name="song" method="POST" data-netlify="true")
+        h2 Любимая песня 2
+        div()
           .price 990 ₽
           .step-title 1. Введите информацию о песне
           .field-block
