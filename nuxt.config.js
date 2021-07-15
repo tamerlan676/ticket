@@ -48,5 +48,16 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extend(config) {
+      console.log('disable minimize')
+      config.optimization.minimize = false;
+      config.minify.minifyJS = false;
+    },
+
+    html: {
+      minify: {
+        minifyJS: false
+      }
+    }
   }
 }
