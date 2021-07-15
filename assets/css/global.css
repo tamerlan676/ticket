@@ -4,5 +4,17 @@
      url(~assets/fonts/Bessemer-Bold.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "SFU-Medium";
+    src: local("SFU-Medium"),
+     url(~assets/fonts/SFU-Medium.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "SFU-Regular";
+    src: local("SFU-Regular"),
+     url(~assets/fonts/SFU-Regular.ttf) format("truetype");
+}
+
 
 
