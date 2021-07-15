@@ -51,7 +51,7 @@ export default {
     extend(config) {
       console.log('disable minimize')
       config.optimization.minimize = false;
-      config.minify.minifyJS = false;
+      config.html.minify.minifyJS = false;
     },
 
     html: {
