@@ -11,11 +11,11 @@
         .options
          h2 Любимая песня 
          form(method="post" data-netlify-honeypot="bot-field" data-netlify="true")
-            input(type="hidden" name="song" value="ask-question")
+            input(type="hidden" name="song-form" value="ask-question")
             .price 990 ₽
             .step-title 1. Введите информацию о песне
             .field-block
-                input(class="input" name="song" v-model="song"   type="text"   placeholder="Введите название песни")
+                input(class="input" name="song"    type="text" @input="changeSong"   placeholder="Введите название песни")
                 input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителей")
                 label Загрузите обложку <br><br>
                 input(name="image" type="file" @change="onFileChange")
