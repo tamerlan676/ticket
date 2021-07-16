@@ -10,7 +10,8 @@
                 img(:src="url")
         .options
          h2 Любимая песня 
-         form(name="song" method="POST" )
+         form(method="post" data-netlify-honeypot="bot-field" data-netlify="true")
+            input(type="hidden" name="song" value="ask-question")
             .price 990 ₽
             .step-title 1. Введите информацию о песне
             .field-block
