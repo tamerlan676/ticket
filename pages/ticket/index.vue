@@ -8,7 +8,7 @@
             .namefield {{ name }}
         .options
          h2 Счастливый билет
-         form(name="contact" method="POST" data-netlify="true")
+         form(name="" method="POST" data-netlify="true")
             .price 990 ₽
             .step-title 1. Выберите город своей мечты
             .towns-wrapper
