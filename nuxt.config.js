@@ -1,6 +1,5 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  mode: 'universal',
   head: {
     title: 'ticket',
     htmlAttrs: {
@@ -47,11 +46,11 @@ export default {
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    html: {
-      minify: {
-        minifyJS: false
-      }
-    }
-  }
+  // build: {
+  //   html: {
+  //     minify: {
+  //       minifyJS: false
+  //     }
+  //   }
+  // }
 }
