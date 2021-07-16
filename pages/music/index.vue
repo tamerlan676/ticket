@@ -15,8 +15,8 @@
             .price 990 ₽
             .step-title 1. Введите информацию о песне
             .field-block
-                input(class="input" name="song"   :checked="song === changeSong" type="text" @input="changeSong"   placeholder="Введите название песни")
-                input(class="input" name="artist"  :checked="artist === changeArtist" type="text" @input="changeArtist"  placeholder="Введите исполнителей")
+                input(class="input" name="song" v-model="song"   type="text"   placeholder="Введите название песни")
+                input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителей")
                 label Загрузите обложку <br><br>
                 input(name="image" type="file" @change="onFileChange")
             .wts-message Если у вас возникли проблемы с конструкотором, напишите нам в 
