@@ -230,7 +230,7 @@ export default {
                 border: 2px solid #000;
                 padding: 5px;
                 margin-bottom: 16px;
-                font-family: "Montserrat";
+                font-family: "Montserrat-Regular";
             }
         }
         button{

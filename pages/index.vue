@@ -16,7 +16,7 @@ export default {};
 
 <style lang="scss">
 .main {
-  font-family: "Montserrat";
+  font-family: "Montserrat-Regular";
 }
 h1, h2, h3, p{
   padding: 0;
