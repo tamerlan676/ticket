@@ -23,9 +23,9 @@
                 a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
             .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
             .field-block
-                input(class="input" name="clientName" type="text"  placeholder="Имя")
-                input(class="input" name="phone" type="text"  placeholder="Номер телефона")
-                input(class="input" name="adress" type="text"  placeholder="Полный адрес")
+                input(class="input" name="clientNameMusic" type="text"  placeholder="Имя")
+                input(class="input" name="phoneMusic" type="text"  placeholder="Номер телефона")
+                input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
             button(type="submit") Заказать чехол
     .ticket-scheme
         .image
@@ -198,6 +198,7 @@ export default {
                 padding: 5px;
                 margin-bottom: 16px;
                 font-family: "Montserrat";
+                font-size: 16px;
             }
         }
         button{

@@ -1,4 +1,10 @@
 @font-face {
+    font-family: "Montserrat-Regular";
+    src: local("Bessemer"),
+     url(~assets/fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
+@font-face {
     font-family: "Bessemer";
     src: local("Bessemer"),
      url(~assets/fonts/Bessemer-Bold.ttf) format("truetype");
