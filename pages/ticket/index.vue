@@ -8,12 +8,13 @@
             .namefield {{ name }}
         .options
          h2 Счастливый билет
-         form(name="ticket-form" method="POST" data-netlify="true")
+         form(name="ticket-form" method="POST" data-netlify-honeypot="bot-field"  data-netlify="true")
+         
             .price 990 ₽
             .step-title 1. Выберите город своей мечты
             .towns-wrapper
                 .item(v-for="(item, key) in towns" :key="key")
-                    input(class="radio" type="radio" :name="item.key" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
+                    input(class="radio" type="radio" :name="item.title" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
                     img(:src="item.flag")
                     label(:for="item.title") {{ item.title }}
             .wts-message Если вашего города мечты нет в списке, напишите нам в 
