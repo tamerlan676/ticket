@@ -106,7 +106,7 @@ export default {
             font-family: 'SFU-Bold';
             width: 220px;
             overflow: hidden;
-            font-size: 12px;
+            font-size: 11px;
             text-overflow: ellipsis;
             white-space: nowrap;          
             @media (min-width: 992px) {
@@ -115,7 +115,7 @@ export default {
         }
         .message-txt{
             font-family: 'SFU-Regular';
-            font-size: 11px;
+            font-size: 10px;
             width: 220px;
              @media (min-width: 992px) {
                  font-size: 15px;
