@@ -6,16 +6,17 @@
             img(:src="require(`@/assets/images/messenger.svg`)")
             .wrapper
                 .author {{ author }}
-                .message-txt {{ message }}
+                .message-txt(v-html="message") {{ message }}
         .options
-         h2 Любимая песня 
+         h2 Уведомление о сообщении 
          form(method="post" name="messeage" data-netlify-honeypot="bot-field" data-netlify="true")
             input(type="hidden" name="form-name" value="message")
             .price 990 ₽
-            .step-title 1. Введите информацию о песне
+            .step-title 1. Введите информацию о сообщениее
             .field-block
                 input(class="input" name="author"    type="text" @input="changeAuthor"   placeholder="Введите имя отправителя")
-                input(class="input" name="message"  type="text" @input="changeText"  placeholder="Введите текст сообщения")
+                textarea(class="input" name="message"  type="text" @input="changeText"  placeholder="Введите текст сообщения")
+                input(class="input" name="model-messenger"  type="text"   placeholder="Введите модель телефона")
             .wts-message Если у вас возникли проблемы с конструкотором, напишите нам в 
                 a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
             .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
@@ -37,8 +38,8 @@
 export default {
     data(){
         return{
-            author: 'Lonely',
-            message: 'Akon',
+            author: 'Скриптонит',
+            message: 'Еще одним холодным утром - руки без слов, Кричат об одном - это любовь.',
         }
     },
     methods: {
@@ -104,7 +105,7 @@ export default {
         }
         .author{
             font-family: 'SFU-Bold';
-            width: 220px;
+            width: 150px;
             overflow: hidden;
             font-size: 11px;
             text-overflow: ellipsis;
@@ -116,9 +117,10 @@ export default {
         .message-txt{
             font-family: 'SFU-Regular';
             font-size: 10px;
-            width: 220px;
+            width: 150px;
              @media (min-width: 992px) {
                  font-size: 15px;
+                 width: 220px;
              }
         }
     }
