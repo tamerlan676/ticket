@@ -13,9 +13,9 @@
                 .title Любимая песня
                 .price 990 ₽
         .item
-            a(href="/ticket")
+            a(href="/messenger")
                 img(src="~/assets/images/preview/smoke.png")
-                .title Свободный текст
+                .title Уведомление
                 .price 990 ₽
         .item
             a(href="/ticket")

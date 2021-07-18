@@ -22,5 +22,11 @@
      url(~assets/fonts/SFU-Regular.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "SFU-Bold";
+    src: local("SFU-Bold"),
+     url(~assets/fonts/SFU-Bold.ttf) format("truetype");
+}
+
 
 
