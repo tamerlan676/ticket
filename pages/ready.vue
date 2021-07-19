@@ -1,13 +1,11 @@
 <template lang="pug">
-  .main
-    Header
-    Nuxt
-    Footer
+    .content
+        h3 Доставка
+        p Lorem
 </template>
 
 <script>
 export default {
-  layout: 'default',
 
 }
 </script>

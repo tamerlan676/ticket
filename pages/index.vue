@@ -1,13 +1,11 @@
 <template lang="pug">
   .main
-    Header
     GreyLine
     Slider
     HelloText
     Banner
     Constructors
     Banner
-    Footer
 </template>
 
 <script>

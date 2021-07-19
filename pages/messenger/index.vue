@@ -1,6 +1,5 @@
 <template lang="pug">
   .ticket
-    Header
     .ticket-wrapper
         .box
             img(:src="require(`@/assets/images/messenger.svg`)")

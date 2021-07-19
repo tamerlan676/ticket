@@ -24,20 +24,20 @@ export default {
     return{
           menu: [
       {
+        title: 'О Нас',
+        href: '/about',
+      },
+                        {
+        title: 'Готовые чехлы',
+        href: '/ready',
+      },
+      {
         title: 'Доставка',
         href: '/delivery',
       },
             {
-        title: 'Готовые чехлы',
-        href: '/delivery',
-      },
-            {
-        title: 'О Нас',
-        href: '/delivery',
-      },
-            {
         title: 'Контакты',
-        href: '/delivery',
+        href: '/contacts',
       },
     ]
     }
