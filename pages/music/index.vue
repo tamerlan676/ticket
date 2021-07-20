@@ -26,19 +26,14 @@
                 input(class="input" name="phoneMusic" type="text"  placeholder="Номер телефона")
                 input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
             button(type="submit") Заказать чехол
-    .examples
-        h2 Примеры кейсов
-        .examples-wrapper
-            .item(v-for="item in list")
-                img(:src="item.img")
-
-    .ticket-scheme
-        .image
-            img(src="~/assets/images/scheme.jpg")
-        .info
-            h3 Стильная защита
-            p Наш новый противоударный футляр версии 3 обеспечивает максимальную защиту, функциональность и стиль. Изготовлен из полужесткого ТПУ толщиной 2,0 мм с нашими уникальными ударными краями TP-Shock.
-                    
+    Examples(:list="list" title="Примеры кейсов")
+    .scheme-container
+        .ticket-scheme
+            .image
+                img(src="~/assets/images/scheme.jpg")
+            .info
+                h3 Стильная защита
+                p Наш новый противоударный футляр версии 3 обеспечивает максимальную защиту, функциональность и стиль. Изготовлен из полужесткого ТПУ толщиной 2,0 мм с нашими уникальными ударными краями TP-Shock.         
 </template>
 
 <script>
@@ -231,21 +226,10 @@ export default {
     }
   }
 
-  .examples{
+  .scheme-container{
       width: 100%;
-      background: #e5e5e5;
-      box-sizing: border-box;
-      padding: 40px 16px;
-      h2{
-          text-align: center;
-      }
-      .examples-wrapper{
-          img{
-              width: 100%;
-          }
-      }
-  }
-  .ticket-scheme{
+      background: #fff;
+        .ticket-scheme{
       display: grid;
       background: white;
       @media (min-width: 992px) {
@@ -266,5 +250,8 @@ export default {
           padding: 16px;
       }
   }
+
+  }
+
 }
 </style>

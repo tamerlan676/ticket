@@ -29,6 +29,7 @@
                 input(class="input" name="phone" type="text"  placeholder="Номер телефона")
                 input(class="input" name="adress" type="text"  placeholder="Полный адрес")
             button(type="submit") Заказать чехол
+    Examples(title="Примеры кейсов" :list="list")
     .ticket-scheme
         .image
             img(src="~/assets/images/scheme.jpg")
@@ -48,6 +49,17 @@ export default {
             moscow: false,
             chehol: false,
             image: 'moscow',
+            list: [
+                {
+                    img:require('~/assets/images/examples/t-1.png')
+                },
+                {
+                    img:require('~/assets/images/examples/t-2.png')
+                },
+                {
+                    img:require('~/assets/images/examples/t-3.png')
+                },
+            ],
             towns: [
                 {
                     title: 'Moscow',
