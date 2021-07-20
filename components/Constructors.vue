@@ -14,7 +14,7 @@
                 .price 990 ₽
         .item
             a(href="/messenger")
-                img(src="~/assets/images/preview/smoke.png")
+                img(src="~/assets/images/preview/message.png")
                 .title Уведомление
                 .price 990 ₽
         .item

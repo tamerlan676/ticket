@@ -6,7 +6,7 @@
             .songfield {{ song }}
             .artistfield {{ artist }}
             .oblozhka
-                img(:src="url")
+                img.obl(:src="url")
         .options
          h2 Любимая песня 
          form(method="post" name="contact" data-netlify-honeypot="bot-field" data-netlify="true")
@@ -26,6 +26,12 @@
                 input(class="input" name="phoneMusic" type="text"  placeholder="Номер телефона")
                 input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
             button(type="submit") Заказать чехол
+    .examples
+        h2 Примеры кейсов
+        .examples-wrapper
+            .item(v-for="item in list")
+                img(:src="item.img")
+
     .ticket-scheme
         .image
             img(src="~/assets/images/scheme.jpg")
@@ -41,7 +47,18 @@ export default {
         return{
             song: 'Lonely',
             artist: 'Akon',
-            url: null
+            url: 'https://note-store.ru/upload/iblock/5bc/AKON-_-Lonely.jpg',
+            list: [
+                {
+                    img: require('~/assets/images/examples/skr.png')
+                },
+                                {
+                    img: require('~/assets/images/examples/patron.png')
+                },
+                {
+                    img: require('~/assets/images/examples/basta.png')
+                }
+            ]
         }
     },
     methods: {
@@ -140,6 +157,7 @@ export default {
                 object-fit: cover;
                 width: 140px;
                 height: 140px;
+                border-radius:5px;
                 @media (min-width: 992px) {
                     width: 200px;
                     height: 200px;
@@ -211,6 +229,21 @@ export default {
             background: red;
         }
     }
+  }
+
+  .examples{
+      width: 100%;
+      background: #e5e5e5;
+      box-sizing: border-box;
+      padding: 40px 16px;
+      h2{
+          text-align: center;
+      }
+      .examples-wrapper{
+          img{
+              width: 300px;
+          }
+      }
   }
   .ticket-scheme{
       display: grid;
