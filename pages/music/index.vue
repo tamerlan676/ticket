@@ -241,7 +241,7 @@ export default {
       }
       .examples-wrapper{
           img{
-              width: 300px;
+              width: 100%;
           }
       }
   }
