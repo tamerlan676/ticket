@@ -8,7 +8,7 @@
                 .message-txt(v-html="message") {{ message }}
         .options
          h2 Уведомление о сообщении 
-         form(method="post" name="messeage" data-netlify-honeypot="bot-field" data-netlify="true")
+         form(method="post" name="message" data-netlify-honeypot="bot-field" data-netlify="true")
             input(type="hidden" name="form-name" value="message")
             .price 990 ₽
             .step-title 1. Введите информацию о сообщениее
