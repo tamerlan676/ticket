@@ -14,16 +14,19 @@
             .price 1100 ₽
             .step-title 1. Введите информацию о песне
             .field-block
-                input(class="input" name="song"    type="text" @input="changeSong"   placeholder="Введите название песни")
-                input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителей")
-                label Загрузите обложку <br><br>
-                input(name="image" type="file" @change="onFileChange")
-            .step-title 2. Посмотрите на чехол, а затем оставьте свои данные и мы решим как вам лучше его отправить!
+                input(class="input" name="song"    type="text" @input="changeSong"   placeholder="Введите название песни" require)
+                input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителей" require)
+                input(name="image" type="file" class="hide" @change="onFileChange")
+                label.field-label 
+                    img(src="~/assets/images/download.svg") 
+                    |
+                    span Загрузите обложку 
+            .step-title 2. Посмотрите на чехол, а затем оставьте свои данные и мы решим как лучше вам его отправить
             .field-block
-                input(class="input" name="clientNameMusic" type="text"  placeholder="Имя")
-                input(class="input" name="phoneMusic" type="text"  placeholder="Номер телефона")
+                input(class="input" name="clientNameMusic" type="text"  placeholder="Имя" require)
+                input(class="input" name="phoneMusic" type="number" v-model="phone"  placeholder="Номер телефона" require)
                 //- input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
-            button(type="submit" @click.prevent="thnRedirect" disabled) Заказать чехол
+            button(type="submit" @click.prevent="thnRedirect") Заказать чехол
     Examples(:list="list")
     .scheme-container
         .ticket-scheme
@@ -33,7 +36,7 @@
                 h3 Стильная защита
                 p Сегодня чехол для телефона — это не просто защитный аксессуар, но ещё и способ выделиться среди одинаковых аппаратов. Наш новый противоударный чехол обеспечивает максимальную защиту, функциональность и стиль.         
     
-    a.whats-help(href="#")
+    a.whats-help(target="_blank" href="https://wa.me/79120374755")
         img(src="~/assets/images/whatsapp.svg")
 </template>
 
@@ -44,6 +47,7 @@ export default {
             song: 'Рамок нет',
             artist: 'Скриптонит',
             url: 'https://images.genius.com/23c979cffec622b853152706f8fd2605.1000x1000x1.jpg',
+            phone: 0,
             list: [
                 {
                     img: require('~/assets/images/examples/skr.png')
@@ -71,8 +75,8 @@ export default {
         thnRedirect: function(){
             localStorage.removeItem('token')
             this.$router.push('/thn')
-        }        
-    }
+        },       
+    },
 }
 </script>
 
@@ -114,7 +118,7 @@ export default {
             position: absolute;
             font-family: 'SFU-Medium';
             bottom: 183px;
-            font-size: 10px;
+            font-size: 9px;
             left: 33px;
             font-weight: 600;
             color: white;
@@ -191,7 +195,7 @@ export default {
         }
         .price{
             font-weight: 500;
-            font-size: 19px;
+            font-size: 20px;
             color: #118B58;
             margin-bottom: 24px;
             font-family: 'Montserrat-Medium';
@@ -215,6 +219,30 @@ export default {
                 font-family: 'Montserrat-Regular';
                 font-size: 16px;
             }
+            .hide{
+                height: 150px;
+                width: 200px;
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+            }
+            .field-label{
+                background: #29B6F6;
+                padding: 10px;
+                margin-top: 16px;
+                display: block;
+                width: fit-content;
+                color: white;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                border-radius: 5px;
+                img{
+                    width: 20px;
+                    margin-right: 8px;
+                }
+
+            }
         }
         button{
             width: 100%;
@@ -225,6 +253,7 @@ export default {
             border: none;
             font-weight: bold;
             background: #64dd17;
+            cursor: pointer;
         }
     }
   }
