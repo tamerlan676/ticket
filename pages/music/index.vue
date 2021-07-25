@@ -24,9 +24,9 @@
             .step-title 2. Посмотрите на чехол, а затем оставьте свои данные и мы решим как лучше вам его отправить
             .field-block
                 input(class="input" name="clientNameMusic" type="text"  placeholder="Имя" require)
-                input(class="input" name="phoneMusic" type="number" v-model="phone"  placeholder="Номер телефона" require)
+                input(class="input" name="phoneMusic" type="number"  placeholder="Номер телефона" require)
                 //- input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
-            button(type="submit" @click.prevent="thnRedirect") Заказать чехол
+            button(type="submit") Заказать чехол
     Examples(:list="list")
     .scheme-container
         .ticket-scheme
@@ -47,7 +47,6 @@ export default {
             song: 'Рамок нет',
             artist: 'Скриптонит',
             url: 'https://images.genius.com/23c979cffec622b853152706f8fd2605.1000x1000x1.jpg',
-            phone: 0,
             list: [
                 {
                     img: require('~/assets/images/examples/skr.png')
