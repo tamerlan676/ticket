@@ -16,9 +16,7 @@
                 input(class="input" name="author"    type="text" @input="changeAuthor"   placeholder="Введите имя отправителя")
                 textarea(class="input" name="message"  type="text" @input="changeText"  placeholder="Введите текст сообщения")
                 input(class="input" name="model-messenger"  type="text"   placeholder="Введите модель телефона")
-            .wts-message Если у вас возникли проблемы с конструкотором, напишите нам в 
-                a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
-            .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
+            .step-title 2. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
             .field-block
                 input(class="input" name="clientNameMusic" type="text"  placeholder="Имя")
                 input(class="input" name="phoneMusic" type="text"  placeholder="Номер телефона")
@@ -76,7 +74,6 @@ export default {
                 padding: 0;
                 width: 400px; 
             }  
-
         img{
             width: 220px;
             @media (min-width: 992px) {
@@ -149,18 +146,16 @@ export default {
         }
         .price{
             font-weight: 500;
-            font-size: 19px;
+            font-size: 23px;
             color: #118B58;
             margin-bottom: 24px;
+            font-family: 'Montserrat-Medium'
         }
         .step-title{
             font-size: 16px;
             line-height: 24px;
             margin-bottom: 16px;
-        }
-        .wts-message{
-            margin-bottom: 16px;
-            display: block;
+            font-family: 'Montserrat-Medium';
         }
         .field-block{
             margin-bottom:16px;

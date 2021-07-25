@@ -16,8 +16,6 @@
                     input(class="radio" type="radio" :name="item.title" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
                     img(:src="item.flag")
                     label(:for="item.title") {{ item.title }}
-            .wts-message Если вашего города мечты нет в списке, напишите нам в 
-                a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
             .step-title 2. Введите данные пассажира
             .field-block
                 input(class="input" name="name" type="text" @input="changeName"  placeholder="Введите имя")
@@ -29,14 +27,13 @@
                 input(class="input" name="phone" type="text"  placeholder="Номер телефона")
                 input(class="input" name="adress" type="text"  placeholder="Полный адрес")
             button(type="submit") Заказать чехол
-    Examples(title="Примеры кейсов" :list="list")
     .ticket-scheme
-        .image
-            img(src="~/assets/images/scheme.jpg")
-        .info
-            h3 Стильная защита
-            p Наш новый противоударный футляр версии 3 обеспечивает максимальную защиту, функциональность и стиль. Изготовлен из полужесткого ТПУ толщиной 2,0 мм с нашими уникальными ударными краями TP-Shock.
-                    
+        .ticket-wrapper
+            .image
+                img(src="~/assets/images/scheme.jpg")
+            .info
+                h3 Стильная защита
+                p Наш новый противоударный футляр версии 3 обеспечивает максимальную защиту, функциональность и стиль. Изготовлен из полужесткого ТПУ толщиной 2,0 мм с нашими уникальными ударными краями TP-Shock.     
 </template>
 
 <script>
@@ -190,14 +187,16 @@ export default {
         }
         .price{
             font-weight: 500;
-            font-size: 19px;
+            font-size: 23px;
             color: #118B58;
             margin-bottom: 24px;
+            font-family: 'Montserrat-Medium';
         }
         .step-title{
             font-size: 16px;
             line-height: 24px;
             margin-bottom: 16px;
+            font-family: 'Montserrat-Medium';
         }
         .towns-wrapper{
             display: flex;
@@ -228,10 +227,6 @@ export default {
                 display: none
             }
         }
-        .wts-message{
-            margin-bottom: 16px;
-            display: block;
-        }
         .field-block{
             margin-bottom:16px;
             .input{
@@ -258,17 +253,21 @@ export default {
     }
   }
   .ticket-scheme{
-      display: grid;
-      background: white;
+      width: 100%;
+      background: #fff;
+      .ticket-wrapper{
+        display: grid;
+        background: white;
       @media (min-width: 992px) {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: 450px 1fr;
           grid-column-gap: 32px;
       }
        @media (min-width: 1200px) {
            width: 1120px;
            margin: 0 auto;
            align-items: center;
-       }
+       }    
+      }
       .image{
           img{
               max-width: 100%;

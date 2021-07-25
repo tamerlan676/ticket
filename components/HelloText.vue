@@ -26,7 +26,7 @@ export default {
     }
     h3{
         font-size: 20px;
-        font-weight: 800;
+        font-family: 'Montserrat-Bold';
         text-transform: uppercase;
         color: #29B6F6;
         margin-bottom: 16px;

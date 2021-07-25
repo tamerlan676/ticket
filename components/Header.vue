@@ -3,7 +3,7 @@
         .mobile-burger(@click="openMenu")
             span
         .logo
-            a(href="/")
+            a(href="#")
               img(src="~/assets/images/logo.svg" alt="chehlovskiy")
         nav
             ul  
@@ -20,6 +20,16 @@
 
 <script>
 export default {
+  head: {
+    title: 'Закажи себе чехол с любимой песней',
+    meta: [
+      {
+        hid: 'description',
+        name: 'chehlovskiy',
+        content: 'Воспользуйся нашим конструктором и собери для себя персональный чехол с любимой песней!'
+      }
+    ],
+  },
   data () {
     return{
           menu: [
@@ -72,6 +82,7 @@ export default {
     position: relative;
     width: 24px;
     height: 18px;
+    display: none;
     @media (min-width: 768px) {
       display: none;
     }

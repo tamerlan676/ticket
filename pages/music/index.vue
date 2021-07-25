@@ -11,38 +11,39 @@
          h2 Любимая песня 
          form(method="post" name="contact" data-netlify-honeypot="bot-field" data-netlify="true")
             input(type="hidden" name="form-name" value="contact")
-            .price 990 ₽
+            .price 1100 ₽
             .step-title 1. Введите информацию о песне
             .field-block
                 input(class="input" name="song"    type="text" @input="changeSong"   placeholder="Введите название песни")
                 input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителей")
                 label Загрузите обложку <br><br>
                 input(name="image" type="file" @change="onFileChange")
-            .wts-message Если у вас возникли проблемы с конструкотором, напишите нам в 
-                a(href="#" style="color: green; font-weight: bold; text-decoration: none") WhatsApp
-            .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
+            .step-title 2. Посмотрите на чехол, а затем оставьте свои данные и мы решим как вам лучше его отправить!
             .field-block
                 input(class="input" name="clientNameMusic" type="text"  placeholder="Имя")
                 input(class="input" name="phoneMusic" type="text"  placeholder="Номер телефона")
-                input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
-            button(type="submit") Заказать чехол
-    Examples(:list="list" title="Примеры кейсов")
+                //- input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
+            button(type="submit" @click.prevent="thnRedirect" disabled) Заказать чехол
+    Examples(:list="list")
     .scheme-container
         .ticket-scheme
             .image
                 img(src="~/assets/images/scheme.jpg")
             .info
                 h3 Стильная защита
-                p Наш новый противоударный футляр версии 3 обеспечивает максимальную защиту, функциональность и стиль. Изготовлен из полужесткого ТПУ толщиной 2,0 мм с нашими уникальными ударными краями TP-Shock.         
+                p Сегодня чехол для телефона — это не просто защитный аксессуар, но ещё и способ выделиться среди одинаковых аппаратов. Наш новый противоударный чехол обеспечивает максимальную защиту, функциональность и стиль.         
+    
+    a.whats-help(href="#")
+        img(src="~/assets/images/whatsapp.svg")
 </template>
 
 <script>
 export default {
     data(){
         return{
-            song: 'Lonely',
-            artist: 'Akon',
-            url: 'https://note-store.ru/upload/iblock/5bc/AKON-_-Lonely.jpg',
+            song: 'Рамок нет',
+            artist: 'Скриптонит',
+            url: 'https://images.genius.com/23c979cffec622b853152706f8fd2605.1000x1000x1.jpg',
             list: [
                 {
                     img: require('~/assets/images/examples/skr.png')
@@ -66,8 +67,11 @@ export default {
         onFileChange(e) {
       const file = e.target.files[0];
       this.url = URL.createObjectURL(file);
-    }
-        
+    },
+        thnRedirect: function(){
+            localStorage.removeItem('token')
+            this.$router.push('/thn')
+        }        
     }
 }
 </script>
@@ -75,6 +79,7 @@ export default {
 <style lang="scss" scoped>
 .ticket{
     background: #E5E5E5;
+    position: relative;
     .ticket-wrapper{
         @media (min-width: 992px) {
             display: flex;
@@ -189,15 +194,13 @@ export default {
             font-size: 19px;
             color: #118B58;
             margin-bottom: 24px;
+            font-family: 'Montserrat-Medium';
         }
         .step-title{
             font-size: 16px;
-            line-height: 24px;
+            line-height: 20px;
             margin-bottom: 16px;
-        }
-        .wts-message{
-            margin-bottom: 16px;
-            display: block;
+            font-family: 'Montserrat-Medium';
         }
         .field-block{
             margin-bottom:16px;
@@ -216,12 +219,12 @@ export default {
         button{
             width: 100%;
             padding: 16px;
-            font-family: 'Montserrat-Regular';
+            font-family: 'Montserrat-Medium';
             color: #fff;
             text-transform: uppercase;
             border: none;
             font-weight: bold;
-            background: red;
+            background: #64dd17;
         }
     }
   }
@@ -253,5 +256,25 @@ export default {
 
   }
 
+}
+.whats-help{
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    position: fixed;
+    border-radius: 100%;
+    animation-name: pulse;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  80% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
 }
 </style>

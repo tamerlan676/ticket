@@ -1,6 +1,6 @@
 <template lang="pug">
 .examples
-    h2 {{ title }}
+    h2 Примеры кейсов
     .examples-wrapper
         .item(v-for="item in list")
             img(:src="item.img")
@@ -25,9 +25,9 @@ export default {
 <style lang="scss" scoped>
   .examples{
       width: 100%;
-      background: #e5e5e5;
+      background: white;
       box-sizing: border-box;
-      padding: 40px 16px;
+      padding: 70px 16px;
       h2{
           text-align: center;
       }
