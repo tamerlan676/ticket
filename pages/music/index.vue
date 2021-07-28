@@ -2,7 +2,7 @@
   .ticket
     .ticket-wrapper
         .box
-            img(:src="require(`@/assets/images/music.svg`)")
+            img(:src="require(`@/assets/images/png.png`)")
             .songfield {{ song }}
             .artistfield {{ artist }}
             .oblozhka
@@ -36,7 +36,7 @@
                 h3 Стильная защита
                 p Сегодня чехол для телефона — это не просто защитный аксессуар, но ещё и способ выделиться среди одинаковых аппаратов. Наш новый противоударный чехол обеспечивает максимальную защиту, функциональность и стиль.         
     
-    a.whats-help(target="_blank" href="https://wa.me/79120374755")
+    a.whats-help(target="_blank" href="https://wa.me/+79266775366")
         img(src="~/assets/images/whatsapp.svg")
 </template>
 
@@ -116,12 +116,11 @@ export default {
         .songfield{
             position: absolute;
             font-family: 'SFU-Medium';
-            bottom: 183px;
+            bottom: 190px;
             font-size: 9px;
-            left: 33px;
+            left: 45px;
             font-weight: 600;
             color: white;
-            background: black;
             @media (min-width: 992px) {
                 font-size: 16px;
                 left: 85px;
@@ -132,8 +131,8 @@ export default {
             position: absolute;
             font-family: 'SFU-Regular';
             color: white;
-            bottom: 170px;
-            left: 33px;
+            bottom: 180px;
+            left: 45px;
             font-size: 10px;
             right: 40px;
             font-weight: 600; 
