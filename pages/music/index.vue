@@ -116,7 +116,7 @@ export default {
         .songfield{
             position: absolute;
             font-family: 'SFU-Medium';
-            bottom: 190px;
+            bottom: 195px;
             font-size: 9px;
             left: 45px;
             font-weight: 600;
@@ -131,7 +131,7 @@ export default {
             position: absolute;
             font-family: 'SFU-Regular';
             color: white;
-            bottom: 180px;
+            bottom: 185px;
             left: 45px;
             font-size: 10px;
             right: 40px;
