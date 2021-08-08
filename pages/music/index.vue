@@ -15,7 +15,7 @@
             .step-title 1. Введите информацию о песне
             .field-block
                 input(class="input" name="song"    type="text" @input="changeSong"   placeholder="Введите название песни" require)
-                input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителей" require)
+                input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителя" require)
                 input(name="image" type="file" class="hide" @change="onFileChange")
                 label.field-label 
                     img(src="~/assets/images/download.svg") 
@@ -46,7 +46,7 @@ export default {
         return{
             song: 'Рамок нет',
             artist: 'Скриптонит',
-            url: 'https://images.genius.com/23c979cffec622b853152706f8fd2605.1000x1000x1.jpg',
+            url: require('assets/images/scrip.jpg'),
             list: [
                 {
                     img: require('~/assets/images/examples/skr.png')
@@ -123,8 +123,8 @@ export default {
             color: white;
             @media (min-width: 992px) {
                 font-size: 16px;
-                left: 85px;
-                bottom: 200px;
+                left: 90px;
+                bottom: 230px;
             }
         }
         .artistfield{
@@ -138,8 +138,8 @@ export default {
             font-weight: 600; 
              @media (min-width: 992px) {
                  font-size: 15px;
-                 bottom: 180px;
-                 left: 85px;
+                 bottom: 210px;
+                 left: 90px;
              }
         }
         .oblozhka{
@@ -152,7 +152,7 @@ export default {
                     width: 200px;
                     height: 200px;
                     left: 100px;
-                    top: 210px;
+                    top: 180px;
                     position: absolute;
             }
             img{
