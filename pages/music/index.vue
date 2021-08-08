@@ -196,7 +196,6 @@ export default {
             font-size: 20px;
             color: #118B58;
             margin-bottom: 24px;
-            font-family: 'Montserrat-Medium';
         }
         .step-title{
             font-size: 16px;
