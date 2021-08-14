@@ -11,7 +11,7 @@
          h2 Любимая песня 
          form(method="post" name="contact" data-netlify-honeypot="bot-field" data-netlify="true")
             input(type="hidden" name="form-name" value="contact")
-            .price 1100 ₽
+            .price 990 ₽
             .step-title 1. Введите информацию о песне
             .field-block
                 input(class="input" name="song"    type="text" @input="changeSong"   placeholder="Введите название песни" require)
@@ -42,6 +42,9 @@
 
 <script>
 export default {
+    headd(){
+        
+    },
     data(){
         return{
             song: 'Рамок нет',
