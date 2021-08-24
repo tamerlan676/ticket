@@ -1,6 +1,7 @@
 <template lang="pug">
   .constructors
     h3 Чехлы-Конструкторы
+    p.p Мы разработали конструкторы,чтобы вы могли свизуализировать ваш кейс
     .wrapper
         .item
             a(href="/ticket")
@@ -29,7 +30,19 @@ export default {
         text-transform: uppercase;
         font-size: 20px;
         color: #29B6F6;
-        margin-bottom: 70px;
+        margin-bottom: 8px;
+
+    }
+    .p{
+      text-align: center;
+      font-weight: 600;
+      max-width: 700px;
+      margin: 0 auto 40px;
+      padding: 0 8px;
+      font-size: 15px;
+      @media (min-width: 768px) {
+        font-size: 16px;
+      }
     }
     .wrapper{
         display: flex;

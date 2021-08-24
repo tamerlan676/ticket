@@ -1,12 +1,26 @@
 <template lang="pug">
     .content
-        h2.title  О Нас
+        h2.title  {{ data.title }}
         img(src="~/assets/images/about.jpeg")
-        p Founded in 2015, in the heart of Scotland. Blanc Space are the ultimate one stop shop for all your iPhone case needs. Design obsessed and quality assured. Look no further.
+        p(v-html="data.text")
 </template>
 
 <script>
 export default {
+  data() {
+    return{
+      data: {
+        title: 'О Нас',
+        text: `Спасибо, что заглянули! Не будем терять ваше время, а коротко и по фактам расскажем о нашей компании:<br>
+         У нас команда дизайнеров, которые делают все, чтобы вы могли найти кейс себе по душе.<br>
+          Мы привлекаем программистов, чтобы вы могли заранее посмотреть как будет выглядеть ваш кейс прямо на этом сайте. <br>
+          Работаем над логистикой, чтобы вы могли как можно скорее получить свой чехол.<br>
+
+
+  `
+      }
+    }
+  }
 
 }
 </script>
@@ -34,6 +48,7 @@ export default {
   }
   p{
     margin: 0 auto;
+    white-space: pre-line;
   }
 }
 
