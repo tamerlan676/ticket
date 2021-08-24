@@ -12,16 +12,6 @@
                 img(src="~/assets/images/preview/music.png")
                 .title Любимая песня
                 .price 990 ₽
-        .item
-            a(href="/messenger")
-                img(src="~/assets/images/preview/message.png")
-                .title Уведомление
-                .price 990 ₽
-        .item
-            a(href="/ticket")
-                img(src="~/assets/images/preview/palaroid.png")
-                .title Палароид
-                .price 990 ₽
 </template>
 
 <script>

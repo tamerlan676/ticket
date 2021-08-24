@@ -12,20 +12,14 @@
             .price 990 ₽
             .step-title 1. Выберите город своей мечты
             .towns-wrapper
-                .item(v-for="(item, key) in towns" :key="key")
-                    input(class="radio" type="radio" :name="item.title" :id="item.title" :value="item.title" v-model="selected" @click="showCity(key, item.img)")
+                .item(v-for="(item, key) in towns" :key="key" @click="showCity(key, item.img)")
+                    input(class="radio" type="radio" :name="item.title" :id="item.title" :value="item.title" v-model="selected" )
                     img(:src="item.flag")
                     label(:for="item.title") {{ item.title }}
             .step-title 2. Введите данные пассажира
             .field-block
                 input(class="input" name="name" type="text" @input="changeName"  placeholder="Введите имя")
                 input(class="input" name="date" type="text" @input="changeDate"  placeholder="Введите дату")
-                input(class="input" name="model" type="text"  placeholder="Введите модель телефона")
-            .step-title 3. Посмотрите на чехол, а затем оставьте свои данные и мы отправим его вам!
-            .field-block
-                input(class="input" name="clientName" type="text"  placeholder="Имя")
-                input(class="input" name="phone" type="text"  placeholder="Номер телефона")
-                input(class="input" name="adress" type="text"  placeholder="Полный адрес")
             button(type="submit") Заказать чехол
     .ticket-scheme
         .ticket-wrapper
@@ -33,7 +27,7 @@
                 img(src="~/assets/images/scheme.jpg")
             .info
                 h3 Стильная защита
-                p Наш новый противоударный футляр версии 3 обеспечивает максимальную защиту, функциональность и стиль. Изготовлен из полужесткого ТПУ толщиной 2,0 мм с нашими уникальными ударными краями TP-Shock.     
+                p Наш новый противоударный футляр версии 3 обеспечивает максимальную защиту, функциональность и стиль. Изготовлен из полужесткого ТПУ толщиной 2,0 мм с нашими уникальными ударными краями TP-Shock.
 </template>
 
 <script>
@@ -96,7 +90,7 @@ export default {
         changeDate: function(event){
             this.date = event.target.value
         },
-        
+
     }
 }
 </script>
@@ -114,7 +108,7 @@ export default {
         @media (min-width: 1200px) {
             width: 1120px;
             padding: 80px 0;
-        }     
+        }
     .box{
         padding: 40px 0;
         width: 220px;
@@ -123,8 +117,8 @@ export default {
         margin: 0 auto;
             @media (min-width: 992px) {
                 padding: 0;
-                width: 400px; 
-            }  
+                width: 400px;
+            }
 
         img{
             width: 220px;
@@ -132,7 +126,7 @@ export default {
             width: 330px;
             margin: 0px auto;
             display: block;
-        } 
+        }
         }
         .namefield{
             position: absolute;
@@ -153,7 +147,7 @@ export default {
             top: 78px;
             font-size: 10px;
             right: 40px;
-            font-weight: 600; 
+            font-weight: 600;
              @media (min-width: 992px) {
                  font-size: 15px;
                  top: 57px;
@@ -169,9 +163,9 @@ export default {
             padding: 40px 72px;
         }
          @media (min-width: 992px) {
-           width: 500px; 
+           width: 500px;
             padding: 40px 24px;
-        }  
+        }
         @media (min-width: 1200px) {
             width: 650px;
             padding: 40px 24px;
@@ -203,7 +197,6 @@ export default {
             margin-bottom: 8px;
             flex-wrap: wrap;
             .item{
-                padding: 10px 16px;
                 background: #E0E0E0;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 width: fit-content;
@@ -211,6 +204,7 @@ export default {
                 margin-bottom: 20px;
                 display: flex;
                 align-items: center;
+                padding: 8px;
                 cursor: pointer;
                 img{
                     width: 20px;
@@ -222,6 +216,7 @@ export default {
                 font-weight: 500;
                 font-size: 15px;
                 cursor: pointer;
+                width: 100%;
             }
             .radio{
                 display: none
@@ -266,7 +261,7 @@ export default {
            width: 1120px;
            margin: 0 auto;
            align-items: center;
-       }    
+       }
       }
       .image{
           img{
