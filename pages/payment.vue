@@ -1,7 +1,7 @@
 <template lang="pug">
   .content
-    h2.title  Контакты
-    img(src="~/assets/images/contacts.jpeg")
+    h2.title  Оплата
+    img(src="~/assets/images/payment.jpeg")
     p Founded in 2015, in the heart of Scotland. Blanc Space are the ultimate one stop shop for all your iPhone case needs. Design obsessed and quality assured. Look no further.
 </template>
 

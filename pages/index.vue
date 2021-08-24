@@ -3,9 +3,9 @@
     GreyLine
     Slider
     HelloText
-    Banner
     Constructors
     Banner
+    ReadyConstructors
 </template>
 
 <script>

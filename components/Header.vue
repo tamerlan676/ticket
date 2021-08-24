@@ -3,19 +3,19 @@
         .mobile-burger(@click="openMenu")
             span
         .logo
-            a(href="#")
+            a(href="/")
               img(src="~/assets/images/logo.svg" alt="chehlovskiy")
         nav
-            ul  
+            ul
                 li(v-for="item in menu")
                     a(:href="item.href") {{ item.title }}
         .mobile-menu(ref="menu")
-            .close  
+            .close
                 img(src="~/assets/images/close.svg" @click="openMenu")
-            ul  
+            ul
                 li(v-for="item in menu")
-                    a(:href="item.href") {{ item.title }}   
-        .grey-line     
+                    a(:href="item.href") {{ item.title }}
+        .grey-line
 </template>
 
 <script>
@@ -38,8 +38,8 @@ export default {
         href: '/about',
       },
                         {
-        title: 'Готовые чехлы',
-        href: '/ready',
+        title: 'Оплата',
+        href: '/payment',
       },
       {
         title: 'Доставка',
@@ -82,7 +82,6 @@ export default {
     position: relative;
     width: 24px;
     height: 18px;
-    display: none;
     @media (min-width: 768px) {
       display: none;
     }

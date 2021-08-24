@@ -1,6 +1,6 @@
 <template lang="pug">
   .constructors
-    h3 Чехлы-Конструкторы
+    h3 Наши коллекции
     .wrapper
         .item
             a(href="/ticket")
@@ -22,6 +22,26 @@
                 img(src="~/assets/images/preview/palaroid.png")
                 .title Палароид
                 .price 990 ₽
+        .item
+          a(href="/ticket")
+            img(src="~/assets/images/preview/travel.png")
+            .title Счастливый билет
+            .price 990 ₽
+        .item
+          a(href="/music")
+            img(src="~/assets/images/preview/music.png")
+            .title Любимая песня
+            .price 990 ₽
+        .item
+          a(href="/messenger")
+            img(src="~/assets/images/preview/message.png")
+            .title Уведомление
+            .price 990 ₽
+        .item
+          a(href="/ticket")
+            img(src="~/assets/images/preview/palaroid.png")
+            .title Палароид
+            .price 990 ₽
 </template>
 
 <script>
