@@ -8,7 +8,7 @@
             .oblozhka
                 img.obl(:src="url")
         .options
-         h2 Любимая песня 
+         h2 Любимая песня
          form(method="post" name="contact" data-netlify-honeypot="bot-field" data-netlify="true")
             input(type="hidden" name="form-name" value="contact")
             .price 990 ₽
@@ -17,10 +17,10 @@
                 input(class="input" name="song"    type="text" @input="changeSong"   placeholder="Введите название песни" require)
                 input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителя" require)
                 input(name="image" type="file" class="hide" @change="onFileChange")
-                label.field-label 
-                    img(src="~/assets/images/download.svg") 
+                label.field-label
+                    img(src="~/assets/images/download.svg")
                     |
-                    span Загрузите обложку 
+                    span Загрузите обложку
             .step-title 2. Посмотрите на чехол, а затем оставьте свои данные и мы решим как лучше вам его отправить
             .field-block
                 input(class="input" name="clientNameMusic" type="text"  placeholder="Имя" require)
@@ -28,14 +28,15 @@
                 //- input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
             button(type="submit") Заказать чехол
     Examples(:list="list")
+    FeaturesInfo(:features="features")
     .scheme-container
         .ticket-scheme
             .image
                 img(src="~/assets/images/scheme.jpg")
             .info
                 h3 Стильная защита
-                p Сегодня чехол для телефона — это не просто защитный аксессуар, но ещё и способ выделиться среди одинаковых аппаратов. Наш новый противоударный чехол обеспечивает максимальную защиту, функциональность и стиль.         
-    
+                p Сегодня чехол для телефона — это не просто защитный аксессуар, но ещё и способ выделиться среди одинаковых аппаратов. Наш новый противоударный чехол обеспечивает максимальную защиту, функциональность и стиль.
+
     a.whats-help(target="_blank" href="https://wa.me/+79266775366")
         img(src="~/assets/images/whatsapp.svg")
 </template>
@@ -43,22 +44,36 @@
 <script>
 export default {
     headd(){
-        
+
     },
     data(){
         return{
             song: 'Рамок нет',
             artist: 'Скриптонит',
-            url: require('assets/images/scrip.jpg'),
+            url: require('/assets/images/scrip.jpg'),
+            features: [
+              {
+                img: require('~/assets/images/icons/time.svg'),
+                desc: 'Изготовление чехла занимает 3 рабочих дня'
+              },
+              {
+                img: require('~/assets/images/icons/delivery.svg'),
+                desc: 'Доставка по России любым удобным способом'
+              },
+              {
+                img: require('~/assets/images/icons/back.svg'),
+                desc: 'Легкий возврать в случае неудовлетворенности'
+              },
+            ],
             list: [
                 {
-                    img: require('~/assets/images/examples/skr.png')
+                    img: require('~/assets/images/examples/ex-1.jpg')
                 },
                                 {
-                    img: require('~/assets/images/examples/patron.png')
+                    img: require('~/assets/images/examples/ex-2.jpg')
                 },
                 {
-                    img: require('~/assets/images/examples/basta.png')
+                    img: require('~/assets/images/examples/ex-1.jpg')
                 }
             ]
         }
@@ -77,7 +92,7 @@ export default {
         thnRedirect: function(){
             localStorage.removeItem('token')
             this.$router.push('/thn')
-        },       
+        },
     },
 }
 </script>
@@ -96,7 +111,7 @@ export default {
         @media (min-width: 1200px) {
             width: 1120px;
             padding: 80px 0;
-        }     
+        }
     .box{
         padding: 40px 0;
         width: 220px;
@@ -105,8 +120,8 @@ export default {
         margin: 0 auto;
             @media (min-width: 992px) {
                 padding: 0;
-                width: 400px; 
-            }  
+                width: 400px;
+            }
 
         img{
             width: 220px;
@@ -114,7 +129,7 @@ export default {
             width: 330px;
             margin: 0px auto;
             display: block;
-        } 
+        }
         }
         .songfield{
             position: absolute;
@@ -138,7 +153,7 @@ export default {
             left: 45px;
             font-size: 10px;
             right: 40px;
-            font-weight: 600; 
+            font-weight: 600;
              @media (min-width: 992px) {
                  font-size: 15px;
                  bottom: 210px;
@@ -178,9 +193,9 @@ export default {
             padding: 40px 72px;
         }
          @media (min-width: 992px) {
-           width: 500px; 
+           width: 500px;
             padding: 40px 24px;
-        }  
+        }
         @media (min-width: 1200px) {
             width: 650px;
             padding: 40px 24px;
@@ -284,6 +299,7 @@ export default {
   }
 
   }
+
 
 }
 .whats-help{
