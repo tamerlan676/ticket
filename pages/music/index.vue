@@ -129,9 +129,9 @@ export default {
         .songfield{
             position: absolute;
             font-family: 'SFU-Medium';
-            bottom: 195px;
+            bottom: 205px;
             font-size: 9px;
-            left: 45px;
+            left: 40px;
             font-weight: 600;
             color: white;
             @media (min-width: 992px) {
@@ -144,8 +144,8 @@ export default {
             position: absolute;
             font-family: 'SFU-Regular';
             color: white;
-            bottom: 185px;
-            left: 45px;
+            bottom: 192px;
+            left: 40px;
             font-size: 10px;
             right: 40px;
             font-weight: 600;
@@ -156,9 +156,9 @@ export default {
              }
         }
         .oblozhka{
-            width: 140px;
-            height: 140px;
-            left:40px;
+            width: 120px;
+            height: 120px;
+            left:55px;
             top: 175px;
             position: absolute;
             @media (min-width: 992px) {
@@ -170,8 +170,8 @@ export default {
             }
             img{
                 object-fit: cover;
-                width: 140px;
-                height: 140px;
+                width: 120px;
+                height: 120px;
                 border-radius:5px;
                 @media (min-width: 992px) {
                     width: 200px;
