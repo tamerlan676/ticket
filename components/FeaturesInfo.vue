@@ -45,6 +45,7 @@ export default {
     .item{
       font-weight: 600;
       text-align: center;
+      font-size: 20px;
       img{
         width: 80px;
         margin-bottom: 16px;
