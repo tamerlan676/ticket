@@ -44,11 +44,15 @@ export default {
     }
     .item{
       font-weight: 600;
-      text-align: center;
-      font-size: 20px;
+      font-size: 19px;
+      line-height: 32px;
       img{
         width: 80px;
         margin-bottom: 16px;
+        opacity: 0.6;
+      }
+      @media(min-width: 768px){
+        text-align: center;
       }
     }
   }
