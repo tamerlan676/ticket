@@ -34,7 +34,7 @@ export default {
       }
       .examples-wrapper{
         display: grid;
-        grid-gap: 32px;
+        grid-gap: 16px;
           @media (min-width: 768px) {
             grid-template-columns: repeat(3, 1fr);
           }

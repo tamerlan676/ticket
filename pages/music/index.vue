@@ -12,7 +12,6 @@
          form(method="post" name="contact" data-netlify-honeypot="bot-field" data-netlify="true")
             input(type="hidden" name="form-name" value="contact")
             .price 990 ₽
-            .step-title 1. Введите информацию о песне
             .field-block
                 input(class="input" name="song"    type="text" @input="changeSong"   placeholder="Введите название песни" require)
                 input(class="input" name="artist"  type="text" @input="changeArtist"  placeholder="Введите исполнителя" require)
@@ -21,14 +20,10 @@
                     img(src="~/assets/images/download.svg")
                     |
                     span Загрузите обложку
-            .step-title 2. Посмотрите на чехол, а затем оставьте свои данные и мы решим как лучше вам его отправить
-            .field-block
-                input(class="input" name="clientNameMusic" type="text"  placeholder="Имя" require)
-                input(class="input" name="phoneMusic" type="number"  placeholder="Номер телефона" require)
-                //- input(class="input" name="adressMusic" type="text"  placeholder="Полный адрес")
-            button(type="submit") Заказать чехол
-    Examples(:list="list")
+            a.submit(href="https://wa.me/+79266775366") Заказать чехол
     FeaturesInfo(:features="features")
+    Examples(:list="list")
+
     .scheme-container
         .ticket-scheme
             .image
@@ -54,15 +49,15 @@ export default {
             features: [
               {
                 img: require('~/assets/images/icons/time.svg'),
-                desc: 'Изготовление чехла занимает 3 рабочих дня'
+                desc: 'Изготовим ваш чехол за 3 рабочих дня после заказа'
               },
               {
                 img: require('~/assets/images/icons/delivery.svg'),
-                desc: 'Доставка по России любым удобным способом'
+                desc: 'Быстро доставим в любую точку России и даже Мира'
               },
               {
                 img: require('~/assets/images/icons/back.svg'),
-                desc: 'Легкий возврать в случае неудовлетворенности'
+                desc: 'Вернем ваши деньги, если вам что-то не понравится'
               },
             ],
             list: [
@@ -225,7 +220,7 @@ export default {
             margin-bottom:16px;
             .input{
                 width: 100%;
-                height: 40px;
+                height: 50px;
                 display: block;
                 box-sizing: border-box;
                 border: 2px solid #000;
@@ -235,7 +230,6 @@ export default {
                 font-size: 16px;
             }
             .hide{
-                height: 150px;
                 width: 200px;
                 position: absolute;
                 opacity: 0;
@@ -259,13 +253,15 @@ export default {
 
             }
         }
-        button{
-            width: 100%;
+        .submit{
+          display: block;
             padding: 16px;
             font-family: 'Montserrat-Medium';
+            text-decoration: none;
             color: #fff;
             text-transform: uppercase;
             border: none;
+          text-align: center;
             font-weight: bold;
             background: #64dd17;
             cursor: pointer;

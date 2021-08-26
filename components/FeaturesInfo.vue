@@ -44,12 +44,13 @@ export default {
     }
     .item{
       font-weight: 600;
-      font-size: 19px;
       line-height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       img{
         width: 80px;
-        margin-bottom: 16px;
-        opacity: 0.6;
+        margin-right: 16px;
       }
       @media(min-width: 768px){
         text-align: center;
