@@ -2,12 +2,12 @@
   .ticket
     .ticket-wrapper
         .box
-            img(:src="require(`@/assets/images/${image}.svg`)")
+            img(:src="require(`@/assets/images/towns/${image}.png`)")
             .datefield {{ date }}
             .namefield {{ name }}
         .options
          h2 Счастливый билет
-         form(name="ticket-form" method="POST" data-netlify-honeypot="bot-field"  data-netlify="true")
+         form(name="ticket-form")
             input(type="hidden" name="form-name" value="ticket-form")
             .price 990 ₽
             .step-title 1. Выберите город своей мечты
@@ -16,11 +16,11 @@
                     input(class="radio" type="radio" :name="item.title" :id="item.title" :value="item.title" v-model="selected" )
                     img(:src="item.flag")
                     label(:for="item.title") {{ item.title }}
-            .step-title 2. Введите данные пассажира
+            .step-title 2. Введите данные пассажира. Они появятся на чехле
             .field-block
                 input(class="input" name="name" type="text" @input="changeName"  placeholder="Введите имя")
-                input(class="input" name="date" type="text" @input="changeDate"  placeholder="Введите дату")
-            button(type="submit") Заказать чехол
+                input(class="input" name="date" type="number" @input="changeDate"  placeholder="Введите дату")
+            a.submit(href="https://wa.me/+79266775366") Заказать чехол
     .ticket-scheme
         .ticket-wrapper
             .image
@@ -131,9 +131,9 @@ export default {
         .namefield{
             position: absolute;
             font-family: 'Bessemer';
-            bottom: 115px;
+            bottom: 130px;
             font-size: 10px;
-            left: 40px;
+            left: 42px;
             font-weight: 600;
             @media (min-width: 992px) {
                 font-size: 16px;
@@ -144,7 +144,7 @@ export default {
         .datefield{
             position: absolute;
             font-family: 'Bessemer';
-            top: 78px;
+            top: 84px;
             font-size: 10px;
             right: 40px;
             font-weight: 600;
@@ -235,16 +235,19 @@ export default {
                 font-family: 'Montserrat-Regular';
             }
         }
-        button{
-            width: 100%;
-            padding: 16px;
-            font-family: 'Montserrat-Regular';
-            color: #fff;
-            text-transform: uppercase;
-            border: none;
-            font-weight: bold;
-            background: red;
-        }
+      .submit{
+        display: block;
+        padding: 16px;
+        font-family: 'Montserrat-Medium';
+        text-decoration: none;
+        color: #fff;
+        text-transform: uppercase;
+        border: none;
+        text-align: center;
+        font-weight: bold;
+        background: #64dd17;
+        cursor: pointer;
+      }
     }
   }
   .ticket-scheme{
