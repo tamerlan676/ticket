@@ -131,9 +131,9 @@ export default {
         .namefield{
             position: absolute;
             font-family: 'Bessemer';
-            bottom: 130px;
+            bottom: 120px;
             font-size: 10px;
-            left: 42px;
+            left: 40px;
             font-weight: 600;
             @media (min-width: 992px) {
                 font-size: 16px;
@@ -144,13 +144,13 @@ export default {
         .datefield{
             position: absolute;
             font-family: 'Bessemer';
-            top: 84px;
+            top: 90px;
             font-size: 10px;
             right: 40px;
             font-weight: 600;
              @media (min-width: 992px) {
                  font-size: 15px;
-                 top: 57px;
+                 top: 75px;
                  right: 95px;
              }
         }
@@ -214,7 +214,7 @@ export default {
             label{
                 color: #0086C3;
                 font-weight: 500;
-                font-size: 15px;
+                font-size: 16px;
                 cursor: pointer;
                 width: 100%;
             }
@@ -226,7 +226,7 @@ export default {
             margin-bottom:16px;
             .input{
                 width: 100%;
-                height: 40px;
+                height: 50px;
                 display: block;
                 box-sizing: border-box;
                 border: 2px solid #000;
