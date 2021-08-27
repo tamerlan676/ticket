@@ -148,6 +148,9 @@ export default {
             font-size: 10px;
             right: 40px;
             font-weight: 600;
+            background: white;
+            padding: 0 5px;
+            overflow: hidden;
              @media (min-width: 992px) {
                  font-size: 15px;
                  top: 75px;
@@ -224,15 +227,18 @@ export default {
         }
         .field-block{
             margin-bottom:16px;
+
             .input{
-                width: 100%;
-                height: 50px;
-                display: block;
-                box-sizing: border-box;
-                border: 2px solid #000;
-                padding: 5px;
-                margin-bottom: 16px;
-                font-family: 'Montserrat-Regular';
+              width: 100%;
+              height: 50px;
+              display: block;
+              box-sizing: border-box;
+              border: 2px solid #000;
+              padding: 5px;
+              margin-bottom: 16px;
+              font-family: 'Montserrat-Regular';
+              font-size: 16px;
+              border-radius: 5px;
             }
         }
       .submit{
