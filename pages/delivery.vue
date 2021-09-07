@@ -1,12 +1,20 @@
 <template lang="pug">
   .content
     h2.title  Доставка
-    img(src="~/assets/images/payment.jpeg")
-    p Founded in 2015, in the heart of Scotland. Blanc Space are the ultimate one stop shop for all your iPhone case needs. Design obsessed and quality assured. Look no further.
+    p(v-html="data.text")
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      data: {
+        text: 'Мы следим за тем, чтобы временное пространство от совершения покупки до получения заказа было минимальным, а процесс получения кейса был максимально комфортным для вас. <br>' +
+          'Мы можем отправить вам товар любым удобным способов. Но сейчас предпочитаем два основных партнера. Это <b>СДЭК и Почта России</b> <br>' +
+          'Подробные детали уточняются во время заказа.'
+      }
+    }
+  }
 
 }
 </script>

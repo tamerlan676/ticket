@@ -1,9 +1,9 @@
 <template lang="pug">
-  a(href="#")
+  a(href="/ticket")
     .banner
         .container
-            h3 Название коллекции
-            p Краткое описание
+            h3 Билет домой
+            p Собери свой билет с помощью конструктора
 </template>
 
 <script>
@@ -19,8 +19,10 @@ export default {
         background-size: cover;
         box-sizing: border-box;
         padding: 40px 16px;
+        background-position: -270px;
          @media (min-width: 768px) {
              padding: 40px 32px;
+           background-position: 0;
          }
          @media (min-width: 1200px) {
              height: 450px;
@@ -39,6 +41,7 @@ export default {
             font-size: 17px;
             text-transform: uppercase;
             font-weight: bold;
+              margin-bottom: 8px;
             @media (min-width: 768px) {
              font-size: 20px;
          }
@@ -48,13 +51,13 @@ export default {
         }
         p{
             color: white;
-            font-size: 16px;
+            font-size: 15px;
             text-transform: uppercase;
             @media (min-width: 992px) {
              font-size: 20px;
          }
         }
         }
-        
+
     }
 </style>

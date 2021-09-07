@@ -1,12 +1,21 @@
 <template lang="pug">
   .content
     h2.title  Оплата
-    img(src="~/assets/images/payment.jpeg")
-    p Founded in 2015, in the heart of Scotland. Blanc Space are the ultimate one stop shop for all your iPhone case needs. Design obsessed and quality assured. Look no further.
+    p(v-html="data.text")
 </template>
 
 <script>
 export default {
+  data(){
+    return {
+      data: {
+        text: 'Заказ кейса происходит по 100% предоплате. Так устроено потому что мы стремимся исключить варианты порчи наших материалов. <br>' +
+          'Но вам не стоит переживать, потому что мы полностью сопровождаем вас с момента оформления заказа до его получения.<br>' +
+          'Оплатить заказ можно переводом на карту <b>Сбербанк, Тинькофф, Альфа-Банк</b> <br>' +
+          'Сейчас мы работаем над внедрением онлайн оплаты на сайт. В скором времени можно будет воспользоваться и ею.'
+      }
+    }
+  }
 
 }
 </script>
