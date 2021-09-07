@@ -1,8 +1,7 @@
 <template lang="pug">
   .content
     h2.title  Контакты
-    img(src="~/assets/images/contacts.jpeg")
-    p Founded in 2015, in the heart of Scotland. Blanc Space are the ultimate one stop shop for all your iPhone case needs. Design obsessed and quality assured. Look no further.
+    p Связтаться с нами можно в любом мессенджере или по телефону + 7 955 920 80 97
 </template>
 
 <script>
