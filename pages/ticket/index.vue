@@ -53,30 +53,35 @@ export default {
             ],
             towns: [
                 {
-                    title: 'Moscow',
-                    img: 'moscow',
-                    flag: require('~/assets/images/rus.svg')
+                    title: 'Tbilisi',
+                    img: 'tbilisi',
+                    flag: require('~/assets/images/flags/geo.svg')
                 },
                                 {
-                    title: 'Madrid',
-                    img: 'madrid',
-                    flag: require('~/assets/images/spa.svg')
+                    title: 'Astana',
+                    img: 'astana',
+                    flag: require('~/assets/images/flags/kaz.svg')
                 },
                                 {
-                    title: 'Paris',
-                    img: 'paris',
-                    flag: require('~/assets/images/spa.svg'),
+                    title: 'Dushanbe',
+                    img: 'dushanbe',
+                    flag: require('~/assets/images/flags/tad.svg')
                 },
-                                {
-                    title: 'Los-Angeles',
-                    flag: require('~/assets/images/usa.svg'),
-                    img: 'los-angeles'
-                },
-                {
-                    title: 'Tokyo',
-                    flag: require('~/assets/images/jap.svg'),
-                    img: 'tokyo'
-                }
+              {
+                title: 'Tashkent',
+                img: 'tashkent',
+                flag: require('~/assets/images/flags/uzb.svg')
+              },
+              {
+                title: 'Yerevan',
+                img: 'erevan',
+                flag: require('~/assets/images/flags/arm.svg')
+              },
+              {
+                title: 'Kyiv',
+                img: 'kiev',
+                flag: require('~/assets/images/flags/ukr.svg')
+              },
             ]
         }
     },
@@ -151,10 +156,12 @@ export default {
             background: white;
             padding: 0 5px;
             overflow: hidden;
+            width: 30px;
              @media (min-width: 992px) {
                  font-size: 15px;
                  top: 75px;
-                 right: 95px;
+                 right: 92px;
+                  width: 50px;
              }
         }
     }
@@ -215,8 +222,8 @@ export default {
                 }
             }
             label{
-                color: #0086C3;
-                font-weight: 500;
+                color: black;
+                font-weight: 600;
                 font-size: 16px;
                 cursor: pointer;
                 width: 100%;
