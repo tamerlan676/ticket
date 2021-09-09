@@ -19,7 +19,7 @@
             .step-title 2. Введите данные пассажира. Они появятся на чехле
             .field-block
                 input(class="input" name="name" type="text" @input="changeName"  placeholder="Введите имя")
-                input(class="input" name="date" type="number" @input="changeDate"  placeholder="Введите дату")
+                input(class="input" name="date" type="number" @input="changeDate"  placeholder="Введите дату рождения")
             a.submit(href="https://wa.me/+79266775366") Заказать чехол
     .ticket-scheme
         .ticket-wrapper
