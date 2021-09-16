@@ -1,6 +1,4 @@
 export default {
-  ssr: false,
-  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ticket',
@@ -17,13 +15,6 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {rel: 'stylesheet', type: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap'}
     ]
-  },
-
-  vue: {
-    config: {
-      productionTip: true,
-      devtools: true
-    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -55,10 +46,5 @@ export default {
 
     ],
   build: {
-    html: {
-      minify: {
-        minifyJS: false
-      }
-    }
   }
 }
