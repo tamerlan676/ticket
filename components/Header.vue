@@ -20,16 +20,6 @@
 
 <script>
 export default {
-  head: {
-    title: 'Закажи себе чехол с любимой песней',
-    meta: [
-      {
-        hid: 'description',
-        name: 'chehlovskiy',
-        content: 'Воспользуйся нашим конструктором и собери для себя персональный чехол с любимой песней!'
-      }
-    ],
-  },
   data () {
     return{
           menu: [

@@ -9,7 +9,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+    head: {
+    title: ' ▷ Закажи себе самый уникальный чехол для телефона',
+    description: 'У нас на сайте можно заказать чехол для любой модели телефона',
+    meta: [
+      {
+        hid: 'description',
+        name: 'chehlovskiy',
+        content: 'Воспользуйся нашим конструктором и собери для себя персональный чехол с любимой песней!'
+      }
+    ],
+  },
+
+};
 </script>
 
 <style lang="scss">

@@ -8,7 +8,7 @@
             .oblozhka
                 img.obl(:src="url")
         .options
-         h2 Любимая песня
+         h1 Чехол с любимой песней
          form(method="post" name="contact" data-netlify-honeypot="bot-field" data-netlify="true")
             input(type="hidden" name="form-name" value="contact")
             .price 990 ₽
@@ -38,9 +38,17 @@
 
 <script>
 export default {
-    headd(){
-
-    },
+       head: {
+    title: ' ▷ Закажи себе чехол с любимой песней',
+    description: 'Мы дарим вам возможность нанести на чехол исполнителя и изображение обложки вашей любимой песни',
+    meta: [
+      {
+        hid: 'description',
+        name: 'chehlovskiy',
+        content: 'Воспользуйся нашим конструктором и собери для себя персональный чехол с любимой песней!'
+      }
+    ],
+  },
     data(){
         return{
             song: 'Рамок нет',
@@ -195,7 +203,7 @@ export default {
             width: 650px;
             padding: 40px 24px;
         }
-        h2{
+        h1{
             color: black;
             font-size: 18px;
             margin-bottom: 8px;
