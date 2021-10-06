@@ -13,7 +13,6 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'yandex-verification', content: '9ac7e9c7fbb3c9ff' },
       { name: 'google-site-verification', content: 'hwlTnA5DEl3i12K8bB_MaFVkF3dBSsmjjifvmJF1PJg' },
-      
     ],
     link: [
       { rel: 'icon', href: '/favicon.svg' },
