@@ -14,7 +14,7 @@ export default {
       { name: 'yandex-verification', content: '9ac7e9c7fbb3c9ff' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', href: '/favicon.svg' },
       {rel: 'stylesheet', type: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap'}
     ]
   },
