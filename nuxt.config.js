@@ -39,6 +39,10 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     [
+      '@nuxtjs/sitemap',
+      {
+        path: '/sitemap.txt',
+      },
       '@nuxtjs/yandex-metrika',
       {
         id: '84011974',
